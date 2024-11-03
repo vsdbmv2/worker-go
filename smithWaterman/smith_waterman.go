@@ -6,6 +6,13 @@ import (
 	"strings"
 )
 
+type LocalMapped struct {
+	IdSequence	int
+	IdSubtypeSequence	int
+	IdSubtype	int
+	Score	int
+}
+
 // computeSmithWaterman calculates the alignment score using the Smith-Waterman algorithm
 func computeSmithWaterman(s1, s2 []string, ge, go_, mt, mst int, currentLine, lastLine []int) int {
 	bestScore := 0
